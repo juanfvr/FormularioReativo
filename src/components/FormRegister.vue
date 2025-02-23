@@ -38,7 +38,7 @@ function submit(e) {
         <label for="nome" :style="isFieldNull(nome)">Nome</label>
           <input
               type="text"
-              autocomplete="false"
+              autocomplete="false   "
               v-model="nome"
               :style="inputColor"
               >
@@ -73,6 +73,8 @@ function submit(e) {
               autocomplete="false"
               min="12"
               max="100"
+              minlength="2"
+              maxlength="2"
               v-model="idade"
               :style="inputColor"
           >
@@ -110,6 +112,7 @@ function submit(e) {
 .form-container {
   background: white;
   min-width: fit-content;
+  height: fit-content;
   padding: 20px;
   border-radius: 8px;
 }
@@ -154,6 +157,10 @@ form {
   flex-direction: column;
   width: 100%;
   color: var(--primary-color);
+}
+
+label {
+  user-select: none;
 }
 
 input {

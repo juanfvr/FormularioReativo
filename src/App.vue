@@ -1,6 +1,7 @@
 <script setup>
 import FormRegister from "@/components/FormRegister.vue";
-import {ref} from "vue";
+import CardUser from "@/components/CardUser.vue";
+import {onMounted, ref} from "vue";
 
 const nome = ref('');
 const sobrenome = ref('');
@@ -21,6 +22,14 @@ const senha = ref('');
           v-model:email="email"
           v-model:senha="senha"
       />
+      <CardUser
+          :nome="nome"
+          :sobrenome="sobrenome"
+          :username="username"
+          :idade="idade"
+          :email="email"
+          :senha="senha"
+      />
   </section>
 </template>
 
@@ -28,6 +37,7 @@ const senha = ref('');
 .title {
   color: #013159;
   margin: 0 0 24px 0;
+  user-select: none;
 
   @media (max-width: 425px) {
     font-size: 1.7em;
@@ -35,7 +45,10 @@ const senha = ref('');
 }
 
 .container {
+  padding: 32px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 24px;
 }
 </style>
