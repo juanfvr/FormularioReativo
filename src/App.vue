@@ -1,7 +1,7 @@
 <script setup>
-import FormRegister from "@/components/FormRegister.vue";
-import CardUser from "@/components/CardUser.vue";
-import {onMounted, ref} from "vue";
+import FormRegister from "@/components/Form/FormRegister.vue";
+import CardUser from "@/components/User/CardUser.vue";
+import { ref } from "vue";
 
 const nome = ref('');
 const sobrenome = ref('');
@@ -36,12 +36,7 @@ const senha = ref('');
 <style>
 .title {
   color: #013159;
-  margin: 0 0 24px 0;
   user-select: none;
-
-  @media (max-width: 425px) {
-    font-size: 1.7em;
-  }
 }
 
 .container {

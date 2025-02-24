@@ -2,13 +2,14 @@
 defineProps([
     'nome', 'sobrenome', 'username', 'idade', 'email', 'senha'
 ])
+
 </script>
 
 <template>
   <section class="box">
     <div class="title">
       <div class="">
-        <img class="icon" src="../assets/icons/address-card.svg" alt="">
+        <img class="icon" src="../../assets/icons/address-card.svg" alt="">
         <h2>Veja como ficará seu perfil</h2>
       </div>
       <span class="subtitle">Você pode editar suas informações após o registro</span>
@@ -28,21 +29,21 @@ defineProps([
         </div>
       </section>
           <div class="email" v-if="email">
-            <img src="../assets/icons/mail-bulk.svg" alt="">
+            <img src="../../assets/icons/mail-bulk.svg" alt="">
             <span>{{ email }}</span>
             </div>
           <div class="emailNull" v-else>
-            <img src="../assets/icons/mail-bulk.svg" alt="">
+            <img src="../../assets/icons/mail-bulk.svg" alt="">
             <span>email-exemplo@email.com</span>
           </div>
           <div class="senha" v-if="senha" >
-            <img src="../assets/icons/lock.svg" alt="">
+            <img src="../../assets/icons/lock.svg" alt="">
             <div>
               <span class="passDot" v-for="letra in senha.toString().split('')">.</span>
             </div>
           </div>
           <div class="senhaNull" v-else>
-            <img src="../assets/icons/lock.svg" alt="">
+            <img src="../../assets/icons/lock.svg" alt="">
             <span class="passDot">...............</span>
           </div>
       <section>
@@ -67,7 +68,7 @@ defineProps([
 
 h2 {
   @media (max-width: 425px) {
-    font-size: 1em;
+    font-size: 1.3em
   }
 
   display: inline;
@@ -75,7 +76,7 @@ h2 {
 
 .subtitle {
   @media (max-width: 425px) {
-    font-size: .5em;
+    font-size: .9em;
   }
 }
 
