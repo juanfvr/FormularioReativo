@@ -10,6 +10,7 @@ defineProps({
 
 <style scoped>
   span {
+    font-size: .8em;
     color: red;
   }
 </style>

@@ -4,9 +4,7 @@ import NullInput from "@/components/Error Components/NullInput.vue";
 
 defineProps({
   inputValue: Boolean,
-  inputType: undefined,
-  label: String
-
+  label: String,
 })
 
 const input = defineModel();
@@ -16,12 +14,12 @@ const input = defineModel();
   <div>
     <label for="">{{ label }}</label>
     <input
-        type='{{ inputType }}'
+        type="text"
         autocomplete="false"
         v-model="input"
         :style="!inputValue ? 'border: 2px solid red' : 'border: 2px solid var(--primary-color)' "
     >
-    <NullInput :style="'fontSize: .8em'" :is-null="!input" />
+    <NullInput :is-null="!input" />
   </div>
 </template>
 
